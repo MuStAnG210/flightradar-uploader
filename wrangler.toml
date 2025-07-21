@@ -1,0 +1,10 @@
+name = "flightradar-uploader"
+main = "fetch_and_upload.js"        # путь до твоего воркера!
+compatibility_date = "2025-07-21"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[kv_namespaces]]
+binding = "flightradar24"
+id = "bc38e4c14424416db8235e8ed90b835b"
