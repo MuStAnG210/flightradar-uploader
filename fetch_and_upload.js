@@ -14,7 +14,12 @@ const unixTimestamp = Math.floor(Date.now() / 1000) - 86400;
 const urls = [];
 const searchTypes = ['departures', 'arrivals'];
 for (const searchType of searchTypes) {
-  for (let page = 1; page  {
+  for (let page = 1; page <= 4; page++) {
+    urls.push(`https://api.flightradar24.com/common/v1/airport.json?code=gyd&plugin[]=&plugin-setting[schedule][mode]=${searchType}&plugin-setting[schedule][timestamp]=${unixTimestamp}&page=${page}&limit=100`);
+  }
+}
+
+(async () => {
   let flightsFound = [];
   for (const url of urls) {
     try {
