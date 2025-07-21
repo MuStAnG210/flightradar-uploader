@@ -2,7 +2,7 @@ name: Fetch and Upload Flights
 
 on:
   schedule:
-    - cron: '*/3 * * * *' # Каждые 5 минут
+    - cron: '*/3 * * * *' # Каждые 3 минуты
   workflow_dispatch:      # Можно запускать вручную
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Add serviceAccountKey.json
         env:
