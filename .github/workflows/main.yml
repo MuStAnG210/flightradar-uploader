@@ -2,7 +2,7 @@ name: Fetch and Upload Flights
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Каждые 5 минут
+    - cron: '2-59/5 * * * *' # Каждые 5 минут
   workflow_dispatch:      # Можно запускать вручную
 
 jobs:
