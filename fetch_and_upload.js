@@ -1,5 +1,5 @@
 const {Firestore} = require('@google-cloud/firestore');
-const serviceAccount = require('./serviceAccountKey.json');
+const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT_JSON);
 const firestore = new Firestore({
   projectId: serviceAccount.project_id,
   credentials: serviceAccount,
