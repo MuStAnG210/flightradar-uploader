@@ -1,8 +1,12 @@
 {
   "name": "flightradar-uploader",
   "version": "1.0.0",
+  "description": "Sync flights with Firestore",
+  "main": "fetch_and_upload.js",
+  "scripts": {
+    "start": "node fetch_and_upload.js"
+  },
   "dependencies": {
-    "node-fetch": "^2.6.1",
-    "firebase-admin": "^11.0.0"
+    "@google-cloud/firestore": "^6.5.0"
   }
 }
