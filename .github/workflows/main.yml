@@ -3,7 +3,7 @@ name: Fetch and Upload Flights
 on:
   schedule:
     - cron: '*/3 * * * *' # Каждые 3 минуты
-  # workflow_dispatch:      # Можно запускать вручную
+  workflow_dispatch:      # Можно запускать вручную
 
 jobs:
   fetch-upload:
